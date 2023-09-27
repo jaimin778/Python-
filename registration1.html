@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="registration1.css">
+    <script>
+        src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+        crossorigin="anonymous"
+</script>
+</head>
+<body>
+    <div class='box'>
+        <div class='wave -one'></div>
+        <div class='wave -two'></div>
+        <div class='wave -three'></div>
+      </div>
+    <nav>
+        <ul>
+          <li><a href="registration.html">Home</a></li>
+          <li><a href="contectus.html">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>   
+      </nav>
+    <div class="icon-bar">
+        <a href="" class="facebook" >
+            click my facbook link <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a href="" class="e-mail" target="_blank">
+            xyz@gmail.com <i class="fa-solid fa-square-envelope"></i>
+        </a>
+        <a href="" class="contact" target="_blank">
+            9955668899 <i class="fa-solid fa-phone"></i></i>
+        </a>
+    
+        <a href="" class="whatsapp" >
+            +91-9955668899 <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+   
+    <div class="container">
+        <div class="title">Registration</div>
+        <form name="regform" action="#" method="POST" onsubmit="return validateForm()">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="detail">Full Name</span>
+                    <input type="text" name="fname" placeholder="Enter your name" >
+                    <span class="error">Please enter the Full name!</span>
+                </div>
+                <div class="input-box">
+                    <span class="detail">Username</span>
+                    <input type="text" name="uname" placeholder="Enter your username" >
+                    <span class="error">Please enter the Username!</span>
+                </div>
+                <div class="input-box">
+                    <span class="detail">Email</span>
+                    <input type="email" name="email" placeholder="Enter your email" >
+                    <span class="error">Please enter the Email</span>
+                    <span class="error" id="emlerr" >Please enter the valid Email!</span>
+                </div>
+                <div class="input-box">
+                    <span class="detail">Phone Number</span>
+                    <input type="text" name="phoneno" placeholder="Enter your number">
+                    <span class="error">Please enter the Phone number!</span>
+                </div>
+                <div class="input-box">
+                    <span>Pincode No. :</span>
+                    <input type="text" name="cpincode" placeholder="Enter your Pincode no." >
+                    <span class="error">Please enter the Pincode!</span>
+                </div>
+                <div class="input-box">
+                    <span for="" class="input-box">Address :</span>
+                    <textarea cols="25" rows="2" name="address" placeholder="Enter your Address"></textarea>
+                </div>
+                <div class="input-box"> 
+                    <span class="detail">Password</span>
+                    <input type="password" name="password" placeholder="Enter your password">
+                    <span class="error"> Please enter the password!</span>
+                    <span class="error" name="passerr">Please enter the vaild password!</span>
+                </div>
+                <div class="input-box">
+                    <span class="detail">Confirm Password</span>
+                    <input type="password" name="cpassword" placeholder="Confirm your password">
+                    <span class="error">Please enter the Password!</span>
+                </div>
+            </div>
+            <div class="gender-detail">
+                <input type="radio" name="gender" value="male" id="dot-1">
+                <input type="radio" name="gender"  value="female" id="dot-2">
+                <input type="radio" name="gender" value="Other" id="dot-3">
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Other</span>
+                    </label>
+                </div>
+                <span id="gender" class="error">Please select gender.</span>
+            </div>
+            <div class="button">
+                <input type="submit" value="Register" onclick="validateForm()">
+            </div>
+        </form>
+    </div>
+    <script src="registration1.js"></script>
+</body>
+</html>

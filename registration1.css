@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    
+    /* height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #71b7e6,#9b59b6);
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: red;
+    background-color: blue;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: inline;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #555;
+} 
+
+.icon-bar{
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    z-index: 10;
+}
+.icon-bar a{
+    text-decoration: none;
+    width: 200px;
+    background: rgb(164, 164, 164);
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+    transform:translateX(-165px) ;
+    transition: 0.8s linear;
+}
+a.facebook {
+    background: #3b5998;
+}
+a.whatsapp {
+    background: #25D366;
+}
+a.e-mail {
+    background: #EA4335;
+}
+a.contact {
+    background: #04AA6D;
+}
+a i{
+    padding-left: 20px;
+    font-size: 30px !important;
+    animation: letszoom 3s linear alternate-reverse infinite;
+}
+a:hover{
+    transform:translateX(0) ;
+    
+    
+}
+
+@keyframes letszoom{
+    from{
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+/* bodypart */
+.container{
+    max-width: 700px;
+    width: 100%;
+    margin: 100px 400px 250px ;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #71b7e6,#9b59b6);
+}
+
+/* formdetail */
+.container form .user-details{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+
+}  
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500; 
+    margin-bottom: 5px;
+} 
+.user-details .input-box .error{
+    display: none;
+    color:red;
+}
+.user-details .input-box input,textarea{
+    resize: none;
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+textarea{
+    padding: 10px;
+}
+.user-details .input-box textarea:focus,
+.user-details .input-box textarea:hover{
+    border-color:#9b59b6
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color:#9b59b6
+}
+form .gender-detail .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+form .gender-detail .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+.gender-detail .category label{
+    display: flex;
+    align-items: center;
+}
+.gender-detail .category .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transform: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+    border-color: #d9d9d9;
+    background: #9b59b6;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .button{
+    display: 45px;
+    margin: 45px 0;
+
+}
+form .button input{
+    height: 40px;
+    width: 100%;
+    outline-color: none;
+    color: #fff;
+    border: none;
+    background: linear-gradient(135deg, #71b7e6,#9b59b6);
+}
+table, th, td{
+    border: 1px solid;
+}
+.eror{
+    display: none;
+    color: red;
+}
